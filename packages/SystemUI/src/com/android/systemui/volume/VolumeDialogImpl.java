@@ -1535,6 +1535,9 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
     }
 
     private void clearAppVolumes() {
+        if (mAppVolumeView == null) {
+            return;
+        }
         mActiveAppRowPackage = null;
         mAppVolumeView.setVisibility(GONE);
         mRows.removeAll(mAppRows);
@@ -1543,11 +1546,14 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
     }
 
     private void initAppVolumes() {
+        if (mAppVolumeView == null) {
+            return;
+        }
         clearAppVolumes();
         boolean showAppVolume = Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.SHOW_APP_VOLUME,
                 0, UserHandle.USER_CURRENT) == 1;
-        if (!showAppVolume || mAppVolumeView == null) {
+        if (!showAppVolume) {
             return;
         }
         boolean appActive = false;
