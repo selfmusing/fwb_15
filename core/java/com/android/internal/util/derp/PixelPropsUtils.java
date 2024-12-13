@@ -229,10 +229,10 @@ public class PixelPropsUtils {
         // Alter build parameters to avoid hardware attestation enforcement
         setPropValue("BRAND", "google");
         setPropValue("MANUFACTURER", "Google");
-        setPropValue("DEVICE", "akita");
-        setPropValue("FINGERPRINT", "google/akita_beta/akita:15/AP41.240925.009/12534705:user/release-keys");
-        setPropValue("MODEL", "Pixel 8a");
-        setPropValue("PRODUCT", "akita_beta");
+        setPropValue("DEVICE", "bluejay");
+        setPropValue("FINGERPRINT", "google/bluejay_beta/bluejay:Baklava/BP21.241018.009/12628839:user/release-keys");
+        setPropValue("MODEL", "Pixel 6a");
+        setPropValue("PRODUCT", "bluejay_beta");
     }
 
     private static boolean isCallerSafetyNet() {
